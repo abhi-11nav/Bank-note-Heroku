@@ -1,0 +1,58 @@
+ <!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+	<meta charset = "UTF=8">
+	<title> HEART DISEASE PREDICTION </title>
+	<style type="text/css">
+		form{
+			margin-left: 600px;	
+		}
+		h1{
+			text-align: center;
+			background-color: lightgray;
+			padding: 0px 20px 0px;
+		}
+		label{
+			padding-bottom: 20px;
+		}
+		.features{
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		button{
+			padding: 10px;
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="login">
+		<h1> BANK NOTE	 PREDICTION MODEL </h1>
+		<form action="{{ url_for('predict')}}"method="post">
+    		<input class="features" type="variance" name="variance" placeholder="variance" required="required"/>
+    		<br>
+        	<input class="features" type="skewness" name="skewness" placeholder="skewness" required="required"/>
+        	<br>
+			<input class="features" type="curtosis" name="curtosis" placeholder="curtosis" required="required"/>
+			<br>
+			<input class="features" type="entropy" name="entropy" placeholder="entropy" required="required"/>
+			<br>		
+        	<button type="SUBMIT" class="btn btn-primary btn-block btn-large">predict</button>
+    	</form>
+
+  		 <br>
+   		<br>
+   		
+   		<div id="prediction_text">
+   		{{ prediction_text }}
+   		</div>
+
+ 	</div>
+
+</body>
+</html> 
+</body>
